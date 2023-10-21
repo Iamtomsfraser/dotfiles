@@ -60,5 +60,10 @@
 [init]
   defaultBranch = master
 [user]
-	email = thomas@thefrasers.co
+	email = thoams@thefrasers.co
 	name = thomas fraser
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
